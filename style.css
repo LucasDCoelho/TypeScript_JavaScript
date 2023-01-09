@@ -1,0 +1,36 @@
+*{
+    color: aliceblue;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background-color: cadetblue;
+    line-height: 25px;
+    padding: 32px;
+    border-radius: 10px;
+    position: absolute;
+    right: 50%;
+    bottom: 50%;
+
+    transform: translate(50%, 50%);
+}
+
+button{
+    color: black;
+    margin-top: 20px;
+    background-color: rgb(63, 95, 154);
+    border: 0;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+input{
+    color: black;
+    padding: 5px;
+    border-radius: 6px;
+    border: 0;
+}
