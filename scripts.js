@@ -12,8 +12,47 @@ let container = document.getElementById('container');
 // let nome: string = "Lucas Coelho";
 // container?.innerHTML = NASCIMENTO;
 function somar() {
-    let v1 = Number(document.getElementById("value1"));
-    let v2 = Number(document.getElementById("value2"));
-    return document.getElementById("resultado").innerHTML = v1 + v2;
+    let v1Input = document.getElementById("value1");
+    let v2Input = document.getElementById("value2");
+    let resultToTal = document.getElementById("resultado");
+    let v1InputString = v1Input.value;
+    let v2InputString = v2Input.value;
+    let v1 = parseFloat(v1InputString);
+    let v2 = parseFloat(v2InputString);
+    let result = v1 + v2;
+    resultToTal.innerHTML = result.toString();
+}
+function subtrair() {
+    let v1Input = document.getElementById("value1");
+    let v2Input = document.getElementById("value2");
+    let resultToTal = document.getElementById("resultado");
+    let v1InputString = v1Input.value;
+    let v2InputString = v2Input.value;
+    let v1 = parseFloat(v1InputString);
+    let v2 = parseFloat(v2InputString);
+    let result = v1 - v2;
+    resultToTal.innerHTML = result.toString();
+}
+function multiplicar() {
+    let v1Input = document.getElementById("value1");
+    let v2Input = document.getElementById("value2");
+    let resultToTal = document.getElementById("resultado");
+    let v1InputString = v1Input.value;
+    let v2InputString = v2Input.value;
+    let v1 = parseFloat(v1InputString);
+    let v2 = parseFloat(v2InputString);
+    let result = v1 * v2;
+    resultToTal.innerHTML = result.toString();
+}
+function dividir() {
+    let v1Input = document.getElementById("value1");
+    let v2Input = document.getElementById("value2");
+    let resultToTal = document.getElementById("resultado");
+    let v1InputString = v1Input.value;
+    let v2InputString = v2Input.value;
+    let v1 = parseFloat(v1InputString);
+    let v2 = parseFloat(v2InputString);
+    let result = Math.round(v1 / v2);
+    resultToTal.innerHTML = result.toString();
 }
 console.log(somar());
