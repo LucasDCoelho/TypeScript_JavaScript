@@ -9,16 +9,15 @@
     </head>
     <body style=" background-color: rgb(52, 52, 52);">
 
-        <form action="">
-            <label for="nome">Nome</label>
-            <input type="text" id="nome">
-            <label for="sobrenome">Sobrenome</label>
-            <input type="text" id="sobrenome">
-            <label for="idade">Idade</label>
-            <input type="number" id="idade">
-
-            <button id="btn" onClick="click();">Enviar</button>
-        </form>
+        <section id="container">
+            <input id="value1" type="text">
+            <input id="value2" type="text">
+            <button onclick="somar()">Somar</button>
+            <button>Subtrair</button>
+            <button>Multiplicar</button>
+            <button>Dividir</button>
+            <div id="resultado"></div>
+        </section>
 
         <script src="scripts.js"></script>
     </body>
