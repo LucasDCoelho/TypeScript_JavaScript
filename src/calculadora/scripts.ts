@@ -19,11 +19,24 @@ let container: HTMLElement | null = document.getElementById('container');
 
 // container?.innerHTML = NASCIMENTO;
 
+interface propsVariables{
+  v1Input: HTMLInputElement,
+  v2Input: HTMLInputElement,
+  resultTotal: HTMLElement,
+  v1InputString: string,
+  v2InputString: string,
+  v1: number,
+  v2: number,
+  result: number,
+};
 
-function somar(){
-  let v1Input: HTMLInputElement = <HTMLInputElement>document.getElementById("value1");
-  let v2Input: HTMLInputElement = <HTMLInputElement>document.getElementById("value2");
-  let resultToTal: HTMLElement = <HTMLElement>document.getElementById("resultado");
+
+
+function somar(props: propsVariables){
+  // let v1Input: HTMLInputElement = <HTMLInputElement>document.getElementById("value1");
+  let v1Input = props.v1Input = <HTMLInputElement>document.getElementById("value1");
+  let v2Input= props.v2Input = <HTMLInputElement>document.getElementById("value2");
+  let resultToTal= props.resultTotal = <HTMLElement>document.getElementById("resultado");
 
   let v1InputString: string = v1Input.value;
   let v2InputString: string = v2Input.value;
@@ -35,10 +48,10 @@ function somar(){
   resultToTal.innerHTML = result.toString();
 }
 
-function subtrair(){
-  let v1Input: HTMLInputElement = <HTMLInputElement>document.getElementById("value1");
-  let v2Input: HTMLInputElement = <HTMLInputElement>document.getElementById("value2");
-  let resultToTal: HTMLElement = <HTMLElement>document.getElementById("resultado");
+function subtrair(props: propsVariables){
+  let v1Input = props.v1Input = <HTMLInputElement>document.getElementById("value1");
+  let v2Input= props.v2Input = <HTMLInputElement>document.getElementById("value2");
+  let resultToTal= props.resultTotal = <HTMLElement>document.getElementById("resultado");
 
   let v1InputString: string = v1Input.value;
   let v2InputString: string = v2Input.value;
@@ -50,10 +63,10 @@ function subtrair(){
   resultToTal.innerHTML = result.toString();
 }
 
-function multiplicar(){
-  let v1Input: HTMLInputElement = <HTMLInputElement>document.getElementById("value1");
-  let v2Input: HTMLInputElement = <HTMLInputElement>document.getElementById("value2");
-  let resultToTal: HTMLElement = <HTMLElement>document.getElementById("resultado");
+function multiplicar(props: propsVariables){
+  let v1Input = props.v1Input = <HTMLInputElement>document.getElementById("value1");
+  let v2Input= props.v2Input = <HTMLInputElement>document.getElementById("value2");
+  let resultToTal= props.resultTotal = <HTMLElement>document.getElementById("resultado");
 
   let v1InputString: string = v1Input.value;
   let v2InputString: string = v2Input.value;
@@ -65,10 +78,10 @@ function multiplicar(){
   resultToTal.innerHTML = result.toString();
 }
 
-function dividir(){
-  let v1Input: HTMLInputElement = <HTMLInputElement>document.getElementById("value1");
-  let v2Input: HTMLInputElement = <HTMLInputElement>document.getElementById("value2");
-  let resultToTal: HTMLElement = <HTMLElement>document.getElementById("resultado");
+function dividir(props: propsVariables){
+  let v1Input = props.v1Input = <HTMLInputElement>document.getElementById("value1");
+  let v2Input= props.v2Input = <HTMLInputElement>document.getElementById("value2");
+  let resultToTal= props.resultTotal = <HTMLElement>document.getElementById("resultado");
 
   let v1InputString: string = v1Input.value;
   let v2InputString: string = v2Input.value;
@@ -79,6 +92,4 @@ function dividir(){
 
   resultToTal.innerHTML = result.toString();
 }
-
-console.log(somar());
 
